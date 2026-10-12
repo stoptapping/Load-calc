@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Load Check">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0B2A3D">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:#0B2A3D}body{margin:0;font:14px/1.45 system-ui,-apple-system,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>AlphaCore Load Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Lato:wght@400;700;900&display=swap">
+<style>
+/* Layout: phone-first tool in the AlphaCore brand (business card + landing page): deep-navy logo bar,
+   navy ink, copper for actions. Road-sign verdict up top (guide green = take, warning yellow = negotiate,
+   regulatory red = pass), trip inputs, then a settlement ledger. Wide screens: sticky result rail. */
+:root{
+  --brand-deep:#0B2A3D; --brand-navy:#123D57; --brand-copper:#C9782A; --brand-mist:#C9D4DC;
+  --bg:#EEF2F5; --surface:#FFFFFF; --field:#F4F7F9; --ink:#123D57; --muted:#4A5560; --line:#D3DCE3;
+  --accent:#A85F1C; --accent-ink:#FFFFFF; --accent-soft:#F6E9DC; --accent-text:#8F4F16;
+  --go:#0A6A44; --go-ink:#FFFFFF; --warn:#F2C300; --warn-ink:#17150B;
+  --stop:#B1271F; --stop-ink:#FFFFFF; --idle:#123D57; --idle-ink:#FFFFFF; --neg:#B1271F;
+  --shadow:0 -6px 18px rgba(11,42,61,.12);
+  --font-display:"Barlow Condensed","Arial Narrow","Helvetica Neue",sans-serif;
+  --font-body:Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-num:Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#071C29; --surface:#0D2738; --field:#123349; --ink:#F2F6F8; --muted:#B4C3CE; --line:#1E4560;
+  --accent:#E39A55; --accent-ink:#0B2A3D; --accent-soft:#3A2A1C; --accent-text:#E8A869;
+  --go:#14855A; --go-ink:#FFFFFF; --warn:#E3B700; --warn-ink:#17150B;
+  --stop:#C63A30; --stop-ink:#FFFFFF; --idle:#1E4A68; --idle-ink:#FFFFFF; --neg:#FF8A7E;
+  --shadow:0 -6px 18px rgba(0,0,0,.45); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#071C29; --surface:#0D2738; --field:#123349; --ink:#F2F6F8; --muted:#B4C3CE; --line:#1E4560;
+  --accent:#E39A55; --accent-ink:#0B2A3D; --accent-soft:#3A2A1C; --accent-text:#E8A869;
+  --go:#14855A; --go-ink:#FFFFFF; --warn:#E3B700; --warn-ink:#17150B;
+  --stop:#C63A30; --stop-ink:#FFFFFF; --idle:#1E4A68; --idle-ink:#FFFFFF; --neg:#FF8A7E;
+  --shadow:0 -6px 18px rgba(0,0,0,.45); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.45;-webkit-text-size-adjust:100%;font-variant-numeric:tabular-nums}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:16px 104px}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;margin:0;text-wrap:balance;letter-spacing:.01em}
+a{color:var(--accent-text)}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* brand bar + title */
+.brandbar{background:var(--brand-deep)}
+.brandbar-in{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.logo{width:30px;height:35px;flex-shrink:0}
+.wordmark{font:800 21px/1 var(--font-display);text-transform:uppercase;letter-spacing:.01em;color:#FFFFFF;white-space:nowrap}
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.top h1{font-size:40px;line-height:.95;text-transform:uppercase;font-weight:800}
+.subtitle{display:block;margin-top:4px;font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--muted)}
+.chip{font:700 12.5px/1 var(--font-num);padding:8px 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line);white-space:nowrap}
+.chip span{color:var(--muted);font-weight:400}
+
+/* layout */
+.layout{display:grid;gap:14px;grid-template-columns:minmax(0,1fr)}
+.rail{display:contents}
+.summary{order:1}.inputs{order:2}.details{order:3}.settings{order:4}.formula{order:5}.sources{order:6}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+.panel-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.panel h2{font-size:22px;text-transform:uppercase}
+.tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent-text)}
+.actions{margin-left:auto;display:flex;gap:6px}
+.btn{font:600 13px var(--font-body);padding:8px 12px;border-radius:9px;border:1px solid var(--line);background:var(--field);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.sub{font:700 11.5px var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px}
+.note{font-size:13.5px;color:var(--muted);margin:0 0 4px;max-width:62ch}
+.save{font-size:12px;color:var(--muted);margin-left:auto}
+
+/* fields */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (min-width:560px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.field label{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.in{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;background:var(--field);min-width:0}
+.in:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.in input,.in select{flex:1;min-width:0;width:100%;border:0;background:transparent;color:var(--ink);font:600 17px var(--font-num);padding:10px 0 9px 10px;outline:none;border-radius:10px}
+.in select{font:600 15px var(--font-body);padding:11px 8px 10px 10px;cursor:pointer}
+.in .u{padding:0 10px 0 4px;color:var(--muted);font:500 13px var(--font-num);white-space:nowrap}
+.in .pre{padding:0 0 0 10px}
+.in .u:empty{display:none}
+.in .pre+input{padding-left:4px}
+.hint{font-size:12px;color:var(--muted);line-height:1.35}
+.field.wide{margin-top:16px}
+
+/* rate mode + load cards */
+.moderow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px}
+.modelabel{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.in.big input{font-size:24px;padding-block:11px 10px}
+.in input.txt{font:600 16px var(--font-body)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--field)}
+.seg button{font:600 13px var(--font-body);padding:10px 12px 9px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.cards{display:grid;gap:12px;margin-top:12px}
+.card{border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}
+.card-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.card-title{font:700 18px var(--font-display);text-transform:uppercase;letter-spacing:.03em}
+.card-head .x{margin-left:auto;font:600 12.5px var(--font-body);padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--muted);cursor:pointer}
+.card-hint{margin-top:10px;font:500 12.5px var(--font-num);color:var(--muted)}
+.card-hint:empty{display:none}
+.field.span2{grid-column:1/-1}
+.btn.add{display:block;width:100%;margin-top:10px;padding:12px;border-style:dashed;font-size:14px;color:var(--accent-text)}
+
+/* verdict sign */
+.sign{--c:var(--idle);--ci:var(--idle-ink);background:var(--c);color:var(--ci);border-radius:16px;padding:20px 20px 17px;position:relative}
+.sign::before{content:"";position:absolute;inset:6px;border:2.5px solid currentColor;border-radius:11px;pointer-events:none}
+[data-k="take"]{--c:var(--go);--ci:var(--go-ink)}
+[data-k="nego"]{--c:var(--warn);--ci:var(--warn-ink)}
+[data-k="pass"]{--c:var(--stop);--ci:var(--stop-ink)}
+[data-k="bid"],[data-k="idle"]{--c:var(--idle);--ci:var(--idle-ink)}
+.sign-word{font:700 48px/0.95 var(--font-display);text-transform:uppercase;letter-spacing:.02em}
+.sign-line{font-size:15px;font-weight:600;margin-top:8px;line-height:1.3}
+.sign-sub{font:500 13px var(--font-num);margin-top:5px}
+@media (prefers-reduced-motion:no-preference){.sign,.pill{transition:background-color .18s ease,color .18s ease}}
+
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:12px}
+.tile{background:var(--surface);padding:10px 10px 9px;min-width:0}
+.tile span{display:block;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tile b{display:block;font:600 19px/1.25 var(--font-num);margin-top:3px;overflow-wrap:anywhere}
+.neg{color:var(--neg)}
+
+/* bid rows */
+.bid{margin-top:8px}
+.row{display:flex;align-items:baseline;gap:10px;padding:9px 2px;border-bottom:1px dashed var(--line)}
+.row:last-child{border-bottom:0}
+.row .k{color:var(--muted);font-size:13.5px;flex:1;min-width:0}
+.row .v{font:600 16px var(--font-num);white-space:nowrap}
+.row .s{font:500 12px var(--font-num);color:var(--muted);white-space:nowrap;min-width:74px;text-align:right}
+.row.ask .k{color:var(--ink);font-weight:600}
+.row.ask .v{color:var(--accent-text);font-size:19px}
+.flags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.flags:empty{display:none}
+.flag{font-size:12.5px;font-weight:600;padding:6px 9px;border-radius:8px;background:var(--field);border:1px solid var(--warn)}
+
+/* trip + ledger */
+.details h2{font-size:20px;margin-bottom:10px}
+.details h2.mt{margin-top:20px}
+.trip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 14px;margin:0}
+.trip div{min-width:0}
+.trip dt{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.trip dd{margin:2px 0 0;font:600 15px var(--font-num)}
+.trip dd small{display:block;font:400 12px/1.35 var(--font-body);color:var(--muted);margin-top:1px}
+.tablewrap{overflow-x:auto}
+.ledger{width:100%;border-collapse:collapse;font-size:14px}
+.ledger th{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:right;font-weight:700;padding:6px 0;border-bottom:1px solid var(--line)}
+.ledger th:first-child{text-align:left}
+.ledger td{padding:7px 0;border-bottom:1px dotted var(--line);vertical-align:baseline}
+.ledger td.n{text-align:right;font-family:var(--font-num);font-weight:500;white-space:nowrap;padding-left:12px}
+.ledger tr.sec td{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-top:14px;border-bottom:0}
+.ledger tr.tot td{font-weight:700;border-bottom:1px solid var(--line)}
+.ledger tr.tot td.n{font-weight:600}
+.ledger tr.net td{font-weight:700;font-size:16px;border-bottom:0;padding-top:10px}
+.ledger tr.net td.n{font-weight:600}
+.ledger .note2{display:block;font-size:12px;color:var(--muted);font-weight:400}
+
+/* settings groups */
+details.group{border-top:1px solid var(--line)}
+details.group>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:13px 0}
+details.group>summary::-webkit-details-marker{display:none}
+.st{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px}
+.gt{font:700 18px var(--font-display);text-transform:uppercase;letter-spacing:.02em}
+.sumv{font:500 12.5px var(--font-num);color:var(--muted)}
+details.group>summary::after{content:"+";flex-shrink:0;font:600 18px/1 var(--font-num);color:var(--muted)}
+details.group[open]>summary::after{content:"−"}
+details.group .grid{padding-bottom:16px}
+.actions-row{display:flex;gap:8px;border-top:1px solid var(--line);padding-top:12px}
+
+/* formula */
+.formula>details>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}
+.formula>details>summary::-webkit-details-marker{display:none}
+.formula>details>summary::after{content:"+";margin-left:auto;font:600 18px/1 var(--font-num);color:var(--muted)}
+.formula>details[open]>summary::after{content:"−"}
+.flist{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
+.flist li{padding-bottom:12px;border-bottom:1px dotted var(--line)}
+.flist li:last-child{border-bottom:0;padding-bottom:0}
+.fn{font:700 15px var(--font-display);text-transform:uppercase;letter-spacing:.04em}
+.fg{font-size:13.5px;color:var(--muted);margin-top:2px}
+.fv{font:500 13.5px var(--font-num);margin-top:4px;overflow-wrap:anywhere}
+
+.sources{font-size:12.5px;color:var(--muted);line-height:1.55;padding-inline:2px}
+.sources p{margin:0 0 6px;max-width:80ch}
+.brandline{font:800 14px var(--font-display);letter-spacing:.04em;text-transform:uppercase;color:var(--ink);margin-bottom:10px!important}
+.brandline b{font-weight:800}
+
+/* bottom bar (phones) */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:10;display:flex;align-items:center;gap:10px;width:100%;border:0;border-top:1px solid var(--line);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--surface);color:var(--ink);box-shadow:var(--shadow);cursor:pointer;text-align:left}
+.pill{font:700 16px/1 var(--font-display);text-transform:uppercase;letter-spacing:.04em;padding:9px 11px 8px;border-radius:8px;background:var(--c);color:var(--ci);white-space:nowrap}
+.bar .mid{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.bar .mid b{font:600 15px var(--font-num)}
+.bar .mid small{font:500 12px var(--font-num);color:var(--muted)}
+.bar .ask{font:600 14px var(--font-num);color:var(--accent-text);white-space:nowrap}
+
+@media (min-width:900px){
+  .brandbar-in{padding-inline:24px}
+  .wrap{padding-inline:24px;padding-block:24px 40px}
+  .layout{grid-template-columns:minmax(0,1fr) minmax(0,430px);align-items:start;gap:18px}
+  .rail{display:flex;flex-direction:column;gap:14px;grid-column:2;grid-row:1 / span 6;position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);max-height:calc(100vh - 32px);overflow:auto;padding-bottom:2px}
+  .inputs,.settings,.formula,.sources{grid-column:1}
+  .bar{display:none}
+}
+/* start-up notice: visible unless the page's code is running */
+.boot{background:var(--warn);color:var(--warn-ink);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:14px;line-height:1.4}
+.boot b{display:block;font:700 17px var(--font-display);text-transform:uppercase;letter-spacing:.03em;margin-bottom:2px}
+.boot code{display:block;margin-top:6px;font:500 12px var(--font-num);overflow-wrap:anywhere}
+.boot code:empty{display:none}
+.js .boot{display:none}
+</style>
+<script>
+(function () {
+  var root = document.documentElement, errs = [];
+  root.className += ' js';
+  function show() {
+    root.className = root.className.replace(/(^|\s)js(\s|$)/g, ' ');
+    var c = document.getElementById('bootErr');
+    if (c && errs.length) c.textContent = 'Error: ' + errs.join(' | ');
+  }
+  window.addEventListener('error', function (ev) {
+    errs.push((ev && ev.message ? ev.message : 'Script error') + (ev && ev.lineno ? ' (line ' + ev.lineno + ')' : ''));
+    if (!window.__lcOK) show();
+  });
+  setTimeout(function () { if (!window.__lcOK) show(); }, 3000);
+})();
+</script>
+
+<header class="brandbar">
+  <div class="brandbar-in">
+    <svg class="logo" viewBox="0 0 100 115.47" aria-hidden="true"><polygon points="50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87" fill="#C9782A"></polygon><polygon points="50,8.08 93,32.9 93,82.57 50,107.39 7,82.57 7,32.9" fill="#123D57"></polygon><text x="50" y="66" text-anchor="middle" font-family="Lato, Helvetica Neue, sans-serif" font-weight="900" font-size="30" fill="#FFFFFF">AC</text><circle cx="42.5" cy="79" r="2.6" fill="#C9782A"></circle><circle cx="50" cy="79" r="2.6" fill="#C9782A"></circle><circle cx="57.5" cy="79" r="2.6" fill="#C9782A"></circle></svg>
+    <span class="wordmark">AlphaCore Solutions LLC</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Load Check</h1>
+      <span class="subtitle">Load and trip profit, per trip</span>
+    </div>
+    <div class="chip" id="dieselChip">Diesel $5.69 <span>TX avg Oct 9</span></div>
+  </div>
+
+  <div class="boot" id="boot" role="status">
+    <b>Calculator didn't start here</b>
+    If only the Rate box works and nothing updates, open this page in Safari (signed in to claude.ai), or use the Load Check spreadsheet in Numbers.
+    <code id="bootErr"></code>
+  </div>
+
+  <main class="layout">
+    <div class="rail">
+      <section class="panel summary" id="summary" aria-label="Result">
+        <div class="sign" id="sign" data-k="idle" aria-live="polite">
+          <div class="sign-word" id="signWord">Enter miles</div>
+          <div class="sign-line" id="signLine"></div>
+          <div class="sign-sub" id="signSub"></div>
+        </div>
+        <div class="tiles">
+          <div class="tile"><span>All-in /mi</span><b id="tAllIn">—</b></div>
+          <div class="tile"><span>Cost /mi</span><b id="tCost">—</b></div>
+          <div class="tile"><span>Profit /mi</span><b id="tPmi">—</b></div>
+          <div class="tile"><span>Profit /hr</span><b id="tPhr">—</b></div>
+          <div class="tile"><span>Profit /day</span><b id="tPday">—</b></div>
+          <div class="tile"><span>Margin</span><b id="tMargin">—</b></div>
+        </div>
+        <div class="bid" id="bid"></div>
+        <div class="flags" id="flags"></div>
+      </section>
+
+      <section class="panel details" id="details" aria-label="Trip and settlement">
+        <h2>Trip</h2>
+        <dl class="trip" id="trip"></dl>
+        <h2 class="mt">Settlement</h2>
+        <div class="tablewrap">
+          <table class="ledger">
+            <thead><tr><th scope="col">Line</th><th scope="col">Amount</th><th scope="col">Per mile</th></tr></thead>
+            <tbody id="ledger"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel inputs" id="loadPanel" aria-labelledby="loadTitle">
+      <div class="panel-head">
+        <h2 id="loadTitle">This trip</h2>
+        <span class="tag" id="exampleTag">Example trip</span>
+        <div class="actions">
+          <button class="btn" type="button" id="btnExample">Example</button>
+          <button class="btn" type="button" id="btnClear">New trip</button>
+        </div>
+      </div>
+      <div class="moderow">
+        <span class="modelabel">Rates entered as</span>
+        <div class="seg" role="group" aria-label="Rate type">
+          <button type="button" id="modeTotal" aria-pressed="true">Total $</button>
+          <button type="button" id="modeMile" aria-pressed="false">Per mile</button>
+        </div>
+      </div>
+      <div class="cards" id="loadCards"></div>
+      <button class="btn add" type="button" id="btnAdd">+ Add another load</button>
+      <h3 class="sub">Rest of the trip</h3><div class="grid" id="gAfter"></div>
+      <h3 class="sub">Money on this trip</h3><div class="grid" id="gMoney"></div>
+      <h3 class="sub">Compare</h3><div class="grid" id="gCompare"></div>
+      <div class="field wide">
+        <label for="f-hos">Hours-of-service rules</label>
+        <div class="in"><select id="f-hos" data-k="hos">
+          <option value="federal">Federal (interstate) 11 / 14 / 10</option>
+          <option value="texas">Texas intrastate 12 / 15 / 8</option>
+          <option value="none">Texas, 26,000 lbs or under: no limits</option>
+          <option value="custom">Custom limits (set below)</option>
+        </select></div>
+        <small class="hint">Numbers are max driving / on-duty hours / hours off. Federal adds a 30-min break after 8 h of driving. Texas-only loads at 26,000 lbs or under have no hours limits: pick that and put your own Trip days. Loads that leave Texas use Federal.</small>
+      </div>
+    </section>
+
+    <section class="panel settings" id="settingsPanel" aria-labelledby="setTitle">
+      <div class="panel-head">
+        <h2 id="setTitle">Your truck &amp; costs</h2>
+        <span class="save" id="saveStatus"></span>
+      </div>
+      <p class="note">Defaults are typical hotshot figures. Put in your real numbers once and they stay saved.</p>
+      <div id="groups"></div>
+      <div class="actions-row"><button class="btn" type="button" id="btnReset">Reset to defaults</button></div>
+    </section>
+
+    <section class="panel formula" aria-labelledby="fTitle">
+      <details open>
+        <summary><h2 id="fTitle">The formula</h2><span class="sumv">every step, with these numbers</span></summary>
+        <ol class="flist" id="flist"></ol>
+      </details>
+    </section>
+
+    <footer class="sources">
+      <p class="brandline"><b>AlphaCore Solutions LLC</b> · USDOT 5414341 · MC-90307121</p>
+      <p>Diesel default: AAA Texas average, $5.689/gal on Oct 9, 2026 (Houston $5.742, McAllen $5.313, Brownsville $5.389). <a href="https://gasprices.aaa.com/?state=TX" target="_blank" rel="noopener">Check today's Texas price</a>.</p>
+      <p>Costs counted: only what each trip spends (fuel, DEF, idle fuel, tolls and permits, other trip costs, road costs per night, driver pay, and per-load fees). Monthly bills, maintenance and tires are left out.</p>
+      <p>Hours of service: FMCSA 49 CFR 395 (11 h driving, 14 h window, 10 h off, 30-min break after 8 h driving). Texas intrastate: 12 h driving, 15 h on duty, 8 h off.</p>
+      <p>MPG and DEF defaults are estimates. Replace them with your own numbers. Not modeled: the 60/70-hour weekly limit, traffic, weather, and broker payment terms.</p>
+    </footer>
+  </main>
+</div>
+
+<button class="bar" id="bar" type="button" aria-label="Show result">
+  <span class="pill" id="barPill" data-k="idle">—</span>
+  <span class="mid"><b id="barNet">—</b><small id="barSub"></small></span>
+  <span class="ask" id="barAsk"></span>
+</button>
+
+<script>
+(function () {
+/*MODEL-START*/
+const DIESEL_REF = { price: 5.69, label: 'Oct 9', full: 'Oct 9, 2026' };
+const DEFAULTS = {
+  diesel: '5.69', dieselDate: '', mpgEmpty: 10, mpgFull: 6, maxWeight: 16000, tankRange: 250, fuelStopMin: 15,
+  def: 0.01,
+  factoring: 3, dispatch: 0, otherFee: 0, tax: 25,
+  driver: 'me', driverBasis: 'pct', driverPay: 28, burden: 10,
+  speed: 55, hoursPerDay: 12, stopHours: 0.5, roadPerNight: 40, target: 300, targetUnit: 'day',
+  hosDrive: 11, hosDuty: 14, hosOff: 10, hosBreakAfter: 8
+};
+const HOS_PRESETS = {
+  federal: { name: 'Federal 11/14/10', drive: 11, duty: 14, off: 10, breakAfter: 8 },
+  texas: { name: 'Texas intrastate 12/15/8', drive: 12, duty: 15, off: 8, breakAfter: 0 },
+  none: { name: 'No hours limits', none: true }
+};
+const LEG_KEYS = ['lane', 'rate', 'loaded', 'dhIn', 'weight', 'mpg', 'loadH', 'unloadH', 'waitH'];
+function n(v) {
+  const x = typeof v === 'number' ? v : parseFloat(String(v == null ? '' : v).replace(/[^0-9.\-]/g, ''));
+  return Number.isFinite(x) ? x : 0;
+}
+function p(v) { return Math.max(n(v), 0); }
+function hosFor(trip, s) {
+  if (trip.hos === 'texas') return HOS_PRESETS.texas;
+  if (trip.hos === 'none') return HOS_PRESETS.none;
+  if (trip.hos === 'custom') return { name: 'Custom ' + p(s.hosDrive) + '/' + p(s.hosDuty) + '/' + p(s.hosOff), drive: p(s.hosDrive), duty: p(s.hosDuty), off: p(s.hosOff), breakAfter: p(s.hosBreakAfter) };
+  return HOS_PRESETS.federal;
+}
+// A one-load object (older format) becomes a trip with one load.
+function normTrip(t) {
+  if (t && Array.isArray(t.loads) && t.loads.length) return t;
+  const one = {};
+  for (const k of LEG_KEYS) one[k] = t ? t[k] : '';
+  return Object.assign({}, t, { loads: [one] });
+}
+// Walks the trip in order under HOS limits: driving, dock work, fuel stops, 30-min breaks, off-duty resets.
+function simulate(legs, rules, s) {
+  const speed = Math.max(n(s.speed), 5);
+  const tank = p(s.tankRange) > 0 ? p(s.tankRange) : Infinity;
+  const fuelStopH = p(s.fuelStopMin) / 60;
+  const free = !!rules.none;                          // no hours-of-service limits
+  const maxDrive = free ? 1e9 : Math.max(n(rules.drive), 1);
+  const maxDuty = free ? 1e9 : Math.max(n(rules.duty), maxDrive);
+  const offH = free ? 0 : p(rules.off);
+  const brkAfter = !free && n(rules.breakAfter) > 0 ? n(rules.breakAfter) : Infinity;
+  const BRK = 0.5, E = 1e-9;
+  let remaining = 0;
+  for (const l of legs) if (l.miles !== undefined) remaining += p(l.miles);
+  const st = { t: 0, duty: 0, drv: 0, since: 0, resets: 0, breaks: 0, fuelStops: 0,
+    driveH: 0, workH: 0, breakH: 0, fuelH: 0, restH: 0, cum: 0, nextFuel: tank, deliveredAt: null, deliveries: [] };
+  const reset = () => { st.t += offH; st.restH += offH; st.resets++; st.duty = 0; st.drv = 0; st.since = 0; };
+  const work = (h, kind) => {
+    if (!(h > 0)) return;
+    if (st.duty >= maxDuty - E) reset();
+    st.t += h; st.duty += h;
+    if (kind === 'fuel') st.fuelH += h; else st.workH += h;
+    if (h >= BRK - E) st.since = 0; // 30+ min not driving satisfies the break
+  };
+  const drive = (miles) => {
+    let left = p(miles), guard = 0;
+    while (left > E && guard++ < 20000) {
+      const avail = Math.min(maxDrive - st.drv, maxDuty - st.duty, brkAfter - st.since);
+      if (avail <= E) {
+        const breakBinds = brkAfter - st.since <= E;
+        const roomAfter = Math.min(maxDrive - st.drv, maxDuty - st.duty - BRK) > E;
+        if (breakBinds && roomAfter) { st.t += BRK; st.duty += BRK; st.breakH += BRK; st.breaks++; st.since = 0; }
+        else reset();
+        continue;
+      }
+      const seg = Math.min(left, avail * speed, st.nextFuel - st.cum);
+      const h = seg / speed;
+      st.t += h; st.duty += h; st.drv += h; st.since += h; st.driveH += h;
+      st.cum += seg; left -= seg; remaining -= seg;
+      if (st.cum >= st.nextFuel - 1e-6) {
+        st.nextFuel += tank;
+        if (remaining > 1e-6) { st.fuelStops++; work(fuelStopH, 'fuel'); }
+      }
+    }
+  };
+  for (const l of legs) {
+    if (l.miles !== undefined) drive(l.miles); else work(p(l.hours), 'work');
+    if (l.mark === 'delivered') { st.deliveredAt = st.t; st.deliveries.push(st.t); }
+  }
+  st.clockH = st.driveH + st.workH + st.breakH + st.fuelH;
+  return st;
+}
+function core(tripIn, s) {
+  const trip = normTrip(tripIn);
+  const P = p(s.diesel);
+  const mpgE = Math.max(n(s.mpgEmpty), 1), mpgF = Math.max(n(s.mpgFull), 1);
+  const wMax = Math.max(n(s.maxWeight), 1);
+  const stops = Math.round(p(trip.stops));
+  const legs = [], loads = [];
+  let L = 0, D1 = 0, R = 0, galLoaded = 0, W = 0;
+  trip.loads.forEach((l, i) => {
+    const Li = p(l.loaded), Di = p(l.dhIn), Wi = p(l.weight);
+    const est = Math.max(mpgE - (mpgE - mpgF) * Math.min(Wi / wMax, 1.5), 2);
+    const actual = p(l.mpg) > 0;
+    const mpg = actual ? Math.max(p(l.mpg), 1) : est;
+    const Ri = trip.rateMode === 'mile' ? p(l.rate) * Li : p(l.rate);
+    legs.push({ miles: Di }, { hours: p(l.loadH) + p(l.waitH) + (i === 0 ? stops * p(s.stopHours) : 0) },
+      { miles: Li }, { hours: p(l.unloadH), mark: 'delivered' });
+    loads.push({ i, lane: String(l.lane || ''), R: Ri, L: Li, D: Di, W: Wi, mpg, actual, gal: Li / mpg, posted: Li > 0 ? Ri / Li : 0 });
+    L += Li; D1 += Di; R += Ri; galLoaded += Li / mpg; W = Math.max(W, Wi);
+  });
+  const D2 = p(trip.dhOut);
+  legs.push({ miles: D2 });
+  const M = L + D1 + D2;
+  const A = p(trip.extras);
+  const G = R + A;
+  const rules = hosFor(trip, s);
+  const sim = simulate(legs, rules, s);
+  const hpd = Math.max(n(s.hoursPerDay), 1);
+  const hours = sim.clockH;
+  const estDays = hours / hpd;
+  // With no hours limits you still sleep: one night per work day after the first.
+  const estNights = rules.none ? Math.max(0, Math.ceil(estDays - 1e-9) - 1) : sim.resets;
+  const daysIn = p(trip.days);
+  const manualDays = daysIn > 0;                      // your own estimate of trip days wins
+  const days = manualDays ? daysIn : estDays;
+  const nights = manualDays ? Math.max(0, Math.ceil(daysIn - 1e-9) - 1) : estNights;
+  const gal = { loaded: galLoaded, empty: (D1 + D2) / mpgE };
+  gal.total = gal.loaded + gal.empty;
+  const mpgL = galLoaded > 0 ? L / galLoaded : mpgE;
+  const fuel = gal.total * P;
+  const def = M * p(s.def);
+  const tolls = p(trip.tolls), other = p(trip.otherCosts);
+  const road = nights * p(s.roadPerNight);
+  const hired = s.driver === 'hired';
+  const burden = 1 + p(s.burden) / 100;
+  const pay = p(s.driverPay);
+  let driverFlat = 0, driverPct = 0;
+  if (hired) {
+    if (s.driverBasis === 'pct') driverPct = pay / 100 * burden;
+    else if (s.driverBasis === 'mile') driverFlat = pay * M * burden;
+    else if (s.driverBasis === 'loaded') driverFlat = pay * L * burden;
+    else if (s.driverBasis === 'day') driverFlat = pay * days * burden;
+    else if (s.driverBasis === 'hour') driverFlat = pay * hours * burden;
+  }
+  const feePct = (p(s.factoring) + p(s.dispatch) + p(s.otherFee)) / 100;
+  const k = feePct + driverPct;                       // share of gross that scales with the rate
+  const C0 = fuel + def + tolls + other + road + driverFlat; // trip costs that don't
+  const fees = G * feePct;
+  const driver = driverFlat + G * driverPct;
+  const cost = C0 + fees + G * driverPct;
+  const net = G - cost;
+  const tgt = p(s.target);
+  const targetProfit = s.targetUnit === 'hour' ? tgt * hours : s.targetUnit === 'mile' ? tgt * M : tgt * days;
+  const denom = 1 - k;
+  const beGross = denom > 0.01 ? C0 / denom : Infinity;
+  const tgtGross = denom > 0.01 ? (C0 + targetProfit) / denom : Infinity;
+  return { loads, multi: loads.length > 1, L, D1, D2, M, R, A, G, W, P, mpgE, mpgF, mpgL, wMax, rules, sim, nights, stops, gal, fuel, def,
+    hpd, hours, days, estDays, estNights, manualDays, tolls, other, road,
+    hired, burden, pay, driverFlat, driverPct, driver, feePct, k, C0, fees, cost, net, targetProfit,
+    beRate: Math.max(beGross - A, 0), tgtRate: Math.max(tgtGross - A, 0) };
+}
+// Cost of driving the same miles empty instead (heading home anyway).
+function emptyRun(X, trip, s) {
+  const rules = hosFor(trip, s);
+  const sim = simulate([{ miles: X }], rules, s);
+  const mpgE = Math.max(n(s.mpgEmpty), 1);
+  const hpd = Math.max(n(s.hoursPerDay), 1);
+  const days = sim.clockH / hpd;
+  const nights = rules.none ? Math.max(0, Math.ceil(days - 1e-9) - 1) : sim.resets;
+  const fuel = X / mpgE * p(s.diesel);
+  const def = X * p(s.def);
+  const road = nights * p(s.roadPerNight);
+  let driver = 0;
+  if (s.driver === 'hired') {
+    const pay = p(s.driverPay), b = 1 + p(s.burden) / 100;
+    if (s.driverBasis === 'mile') driver = pay * X * b;
+    else if (s.driverBasis === 'day') driver = pay * days * b;
+    else if (s.driverBasis === 'hour') driver = pay * sim.clockH * b;
+  }
+  return { miles: X, hours: sim.clockH, cost: fuel + def + road + driver };
+}
+// Extra deadhead miles you could absorb and still hit the target.
+function cushion(tripIn, s) {
+  const trip = normTrip(tripIn);
+  const f = x => {
+    const loads = trip.loads.map((l, i) => i === 0 ? Object.assign({}, l, { dhIn: p(l.dhIn) + x }) : l);
+    const r = core(Object.assign({}, trip, { loads }), s);
+    return r.net - r.targetProfit;
+  };
+  if (f(0) < 0) return 0;
+  let lo = 0, hi = 50;
+  while (hi <= 6400 && f(hi) >= 0) { lo = hi; hi *= 2; }
+  if (hi > 6400) return lo;
+  for (let i = 0; i < 28; i++) { const mid = (lo + hi) / 2; if (f(mid) >= 0) lo = mid; else hi = mid; }
+  return lo;
+}
+function ceil25(x) { return Number.isFinite(x) ? Math.ceil(Math.max(x, 0) / 25) * 25 : Infinity; }
+function evaluate(tripIn, s) {
+  const trip = normTrip(tripIn);
+  const r = core(trip, s);
+  const M = r.M;
+  r.perMile = M > 0 ? r.net / M : 0;
+  r.perHour = r.hours > 0 ? r.net / r.hours : 0;
+  r.perDay = r.days > 0 ? r.net / r.days : 0;
+  r.allIn = M > 0 ? r.G / M : 0;
+  r.costPerMile = M > 0 ? r.cost / M : 0;
+  r.runPerMile = M > 0 ? (r.fuel + r.def) / M : 0;
+  r.posted = r.L > 0 ? r.R / r.L : 0;
+  r.margin = r.G > 0 ? r.net / r.G : 0;
+  r.taxPct = p(s.tax);
+  r.afterTax = r.net > 0 ? r.net * (1 - r.taxPct / 100) : r.net;
+  r.market = r.multi ? 0 : p(trip.market);
+  r.marketRate = r.market > 0 ? r.market * r.L : 0;
+  r.marketDiff = r.market > 0 && r.posted > 0 ? r.posted / r.market - 1 : null;
+  r.tripAsk = ceil25(Math.max(r.tgtRate, r.marketRate));
+  const unpriced = r.loads.filter(x => x.L > 0 && x.R <= 0);
+  const known = r.loads.reduce((a, x) => a + (x.R > 0 ? x.R : 0), 0);
+  if (unpriced.length) {                       // bid: what the unpriced load(s) must pay
+    r.focus = unpriced.map(x => x.i);
+    r.focusL = unpriced.reduce((a, x) => a + x.L, 0);
+    r.ask = ceil25(Math.max(r.tgtRate - known, r.marketRate));
+    r.be = r.beRate - known;
+  } else if (r.multi) {                        // trip: what the last load must pay
+    const last = r.loads[r.loads.length - 1];
+    r.focus = [last.i];
+    r.focusL = last.L;
+    r.ask = ceil25(r.tgtRate - (known - last.R));
+    r.be = r.beRate - (known - last.R);
+  } else {
+    r.focus = [0];
+    r.focusL = r.L;
+    r.ask = r.tripAsk;
+    r.be = r.beRate;
+  }
+  r.askBasis = r.marketRate > r.tgtRate ? 'market' : 'target';
+  r.focusLabel = r.multi ? (r.focus.length === 1 ? 'load ' + (r.focus[0] + 1) : 'loads ' + r.focus.map(i => i + 1).join(' + ')) : '';
+  r.overweight = r.loads.filter(x => x.W > r.wMax).map(x => x.i + 1);
+  const X = p(trip.emptyAnyway);
+  r.alt = X > 0 ? emptyRun(X, trip, s) : null;
+  if (r.alt) r.alt.gain = r.net + r.alt.cost;
+  r.cushion = (r.R > 0 && r.L > 0 && !unpriced.length && r.net >= r.targetProfit) ? cushion(trip, s) : null;
+  r.state = r.L <= 0 ? 'idle' : unpriced.length ? 'bid' : r.net < 0 ? 'pass' : r.net < r.targetProfit ? 'nego' : 'take';
+  return r;
+}
+/*MODEL-END*/
+
+const MAX_LOADS = 8;
+const BLANK_LEG = { lane: '', rate: '', loaded: '', dhIn: '', weight: '', mpg: '', loadH: '1.5', unloadH: '1', waitH: '' };
+const TRIP_KEYS = ['rateMode', 'dhOut', 'days', 'stops', 'extras', 'tolls', 'otherCosts', 'market', 'emptyAnyway', 'hos'];
+const BLANK_TRIP = { rateMode: 'total', dhOut: '', days: '', stops: '', extras: '', tolls: '', otherCosts: '', market: '', emptyAnyway: '', hos: 'federal' };
+function blankTrip(keep) { return Object.assign({}, BLANK_TRIP, keep || {}, { loads: [Object.assign({}, BLANK_LEG)] }); }
+function cloneTrip(t) { return Object.assign({}, t, { loads: t.loads.map(l => Object.assign({}, l)) }); }
+const EXAMPLE_TRIP = Object.assign({}, BLANK_TRIP, { dhOut: '353', loads: [
+  Object.assign({}, BLANK_LEG, { lane: 'Houston to Pharr', rate: '750', loaded: '345', weight: '8000', mpg: '7.5' }),
+  Object.assign({}, BLANK_LEG, { lane: 'Pharr to Brownsville', rate: '400', loaded: '56', weight: '7800', mpg: '7.5' })
+] });
+
+const LEG_FIELDS = [
+  { k: 'lane', label: 'Lane (optional)', type: 'text', ph: 'e.g. Houston to Pharr', span: true },
+  { k: 'rate', label: 'Rate offered', pre: '$', big: true, span: true },
+  { k: 'loaded', label: 'Loaded miles', suf: 'mi' },
+  { k: 'dhIn', label: 'Deadhead to pickup', suf: 'mi' },
+  { k: 'weight', label: 'Weight', suf: 'lbs' },
+  { k: 'mpg', label: 'Actual MPG', suf: 'mpg', hint: 'Optional. Blank = estimate from weight' },
+  { k: 'loadH', label: 'Load time', suf: 'h', hint: 'Include straps and tarps' },
+  { k: 'unloadH', label: 'Unload time', suf: 'h' },
+  { k: 'waitH', label: 'Wait time', suf: 'h' }
+];
+const TRIP_GROUPS = {
+  gAfter: [
+    { k: 'dhOut', label: 'Empty miles after last delivery', suf: 'mi', hint: 'Back home or to the next reload', span: true },
+    { k: 'days', label: 'Trip days', suf: 'days', hint: '' },
+    { k: 'stops', label: 'Extra stops', suf: '', hint: 'Pickups or drops beyond each load’s own' }
+  ],
+  gMoney: [
+    { k: 'extras', label: 'Extra pay', pre: '$', hint: 'Detention, tarp, stop pay, FSC (all loads)' },
+    { k: 'tolls', label: 'Tolls & permits', pre: '$' },
+    { k: 'otherCosts', label: 'Other trip costs', pre: '$', hint: 'Lumper, scales, parking' }
+  ],
+  gCompare: [
+    { k: 'market', label: 'Lane average', pre: '$', suf: '/mi', hint: 'From DAT or Truckstop rate data' },
+    { k: 'emptyAnyway', label: 'Empty miles anyway', suf: 'mi', hint: 'Miles you would drive home empty without this trip' }
+  ]
+};
+const BASIS = {
+  pct: { pre: '', suf: '% gross', def: 28, label: 'of gross', desc: '% of gross' },
+  mile: { pre: '$', suf: '/mi', def: 0.55, label: 'per mile', desc: '$ per mile × total miles' },
+  loaded: { pre: '$', suf: '/mi', def: 0.65, label: 'per loaded mile', desc: '$ per loaded mile × loaded miles' },
+  day: { pre: '$', suf: '/day', def: 250, label: 'per day', desc: '$ per day × work days' },
+  hour: { pre: '$', suf: '/h', def: 25, label: 'per hour', desc: '$ per hour × hours' }
+};
+const SETTING_GROUPS = [
+  { id: 'fuel', title: 'Fuel & truck', fields: [
+    { k: 'diesel', label: 'Diesel price', pre: '$', suf: '/gal', hint: '' },
+    { k: 'mpgEmpty', label: 'MPG, empty trailer', suf: 'mpg', hint: 'Used for deadhead miles' },
+    { k: 'mpgFull', label: 'MPG, max load', suf: 'mpg' },
+    { k: 'maxWeight', label: 'Max cargo weight', suf: 'lbs', hint: 'Load MPG is estimated between the two MPGs by weight, unless you enter an actual MPG on the load' },
+    { k: 'tankRange', label: 'Miles per tank', suf: 'mi', hint: 'Sets the number of fuel stops' },
+    { k: 'fuelStopMin', label: 'Fuel stop time', suf: 'min' },
+    { k: 'def', label: 'DEF', pre: '$', suf: '/mi' }
+  ]},
+  { id: 'fees', title: 'Fees & taxes', fields: [
+    { k: 'factoring', label: 'Factoring', suf: '%' },
+    { k: 'dispatch', label: 'Dispatch fee', suf: '%' },
+    { k: 'otherFee', label: 'Other % fees', suf: '%', hint: 'Broker quick pay, etc.' },
+    { k: 'tax', label: 'Tax set-aside', suf: '%', hint: 'Only used for the after-tax line' }
+  ]},
+  { id: 'driver', title: 'Driver', fields: [
+    { k: 'driver', label: 'Who drives', type: 'select', options: [['me', 'Me (owner)'], ['hired', 'Hired driver']] },
+    { k: 'driverBasis', label: 'Driver pay basis', type: 'select', hired: true, options: [['pct', '% of gross'], ['mile', '$ per mile (all)'], ['loaded', '$ per loaded mile'], ['day', '$ per day'], ['hour', '$ per hour']] },
+    { k: 'driverPay', label: 'Driver pay', hired: true },
+    { k: 'burden', label: 'Payroll taxes & comp', suf: '%', hired: true, hint: 'Employer FICA, unemployment, comp' }
+  ]},
+  { id: 'time', title: 'Time & target', fields: [
+    { k: 'speed', label: 'Average speed', suf: 'mph' },
+    { k: 'hoursPerDay', label: 'Hours in a work day', suf: 'h', hint: 'Turns hours into work days' },
+    { k: 'stopHours', label: 'Time per extra stop', suf: 'h' },
+    { k: 'roadPerNight', label: 'Cost per night out', pre: '$', hint: 'Sleeping in the truck: about $40 of idling for 8 hours. Add a motel or food if you pay for them.' },
+    { k: 'target', label: 'Target profit', pre: '$' },
+    { k: 'targetUnit', label: 'Target per', type: 'select', options: [['day', 'Day'], ['hour', 'Hour'], ['mile', 'Mile']] }
+  ]},
+  { id: 'hos', title: 'Custom HOS limits', fields: [
+    { k: 'hosDrive', label: 'Max driving', suf: 'h' },
+    { k: 'hosDuty', label: 'Max on-duty window', suf: 'h' },
+    { k: 'hosOff', label: 'Off-duty reset', suf: 'h' },
+    { k: 'hosBreakAfter', label: '30-min break after', suf: 'h', hint: '0 = no break rule' }
+  ]}
+];
+
+/* ---------- storage ---------- */
+const KEY_S = 'alcLoadCheck.settings.v1', KEY_L = 'alcLoadCheck.load.v1';
+const LS = {
+  get(k) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+  del(k) { try { localStorage.removeItem(k); } catch (e) {} }
+};
+const SELECTS = { driver: ['me', 'hired'], driverBasis: Object.keys(BASIS), targetUnit: ['day', 'hour', 'mile'] };
+function cleanSettings(obj) {
+  const out = Object.assign({}, DEFAULTS);
+  if (!obj || typeof obj !== 'object') return out;
+  for (const k of Object.keys(DEFAULTS)) {
+    if (!(k in obj)) continue;
+    const v = obj[k];
+    if (typeof v !== 'string' && typeof v !== 'number') continue;
+    const sv = String(v).slice(0, 24);
+    if (SELECTS[k] && !SELECTS[k].includes(sv)) continue;
+    out[k] = sv;
+  }
+  return out;
+}
+function cleanTrip(obj) {
+  if (!obj || typeof obj !== 'object') return blankTrip();
+  const out = Object.assign({}, BLANK_TRIP);
+  for (const k of TRIP_KEYS) if (typeof obj[k] === 'string') out[k] = obj[k].slice(0, 24);
+  const src = Array.isArray(obj.loads) ? obj.loads : [obj];   // older saves held a single load
+  out.loads = src.slice(0, MAX_LOADS).map(l => {
+    const o = Object.assign({}, BLANK_LEG);
+    if (l && typeof l === 'object') for (const k of LEG_KEYS) if (typeof l[k] === 'string') o[k] = l[k].slice(0, k === 'lane' ? 40 : 24);
+    return o;
+  });
+  if (!out.loads.length) out.loads = [Object.assign({}, BLANK_LEG)];
+  if (!['total', 'mile'].includes(out.rateMode)) out.rateMode = 'total';
+  if (!['federal', 'texas', 'none', 'custom'].includes(out.hos)) out.hos = 'federal';
+  return out;
+}
+let S = cleanSettings(LS.get(KEY_S));
+const savedTrip = LS.get(KEY_L);
+let TRIP = savedTrip ? cleanTrip(savedTrip) : cloneTrip(EXAMPLE_TRIP);
+let isExample = !savedTrip;
+
+/* ---------- formatting ---------- */
+const $ = q => document.querySelector(q);
+const fmt0 = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+function money(x) { if (!Number.isFinite(x)) return '—'; const r = Math.round(x); const s = '$' + fmt0.format(Math.abs(r)); return r < 0 ? '−' + s : s; }
+function money2(x) { if (!Number.isFinite(x)) return '—'; const s = '$' + Math.abs(x).toFixed(2); return x <= -0.005 ? '−' + s : s; }
+function mi(x) { return fmt0.format(Math.round(x)); }
+function one(x) { return (Math.round(x * 10) / 10).toFixed(1); }
+function dur(h) { if (!Number.isFinite(h)) return '—'; if (h < 24) return one(h) + ' h'; const d = Math.floor(h / 24); return d + ' d ' + one(h - d * 24) + ' h'; }
+function signed(x) { return (x >= 0 ? '+' : '−') + money(Math.abs(x)); }
+function dateLabel(iso) { try { return new Date(iso + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); } catch (e) { return iso; } }
+function targetText() { const t = p(S.target); return S.targetUnit === 'hour' ? money(t) + '/hr' : S.targetUnit === 'mile' ? money2(t) + '/mi' : money(t) + '/day'; }
+function node(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+function loadName(x) { return 'Load ' + (x.i + 1) + (x.lane ? ' · ' + x.lane : ''); }
+
+/* ---------- build inputs ---------- */
+function makeField(f, scope, idx) {
+  const key = idx === undefined ? f.k : 'L' + idx + '-' + f.k;
+  const wrap = node('div', 'field' + (f.span ? ' span2' : '')); wrap.id = 'w-' + key;
+  const id = 'f-' + key;
+  const lab = node('label', null, f.label); lab.htmlFor = id; wrap.appendChild(lab);
+  const box = node('div', 'in' + (f.big ? ' big' : ''));
+  if (f.type === 'select') {
+    const sel = document.createElement('select'); sel.id = id; sel.dataset.k = f.k; sel.dataset.scope = scope;
+    for (const [v, t] of f.options) { const o = node('option', null, t); o.value = v; sel.appendChild(o); }
+    box.appendChild(sel);
+  } else {
+    const pre = node('span', 'u pre', f.pre || ''); pre.id = 'pre-' + key; box.appendChild(pre);
+    const inp = document.createElement('input');
+    inp.setAttribute('type', 'text');
+    inp.setAttribute('autocomplete', 'off');
+    if (f.type === 'text') { inp.className = 'txt'; inp.setAttribute('maxlength', '40'); inp.setAttribute('autocapitalize', 'words'); }
+    else inp.setAttribute('inputmode', 'decimal');
+    inp.id = id; inp.dataset.k = f.k; inp.dataset.scope = scope;
+    if (idx !== undefined) inp.dataset.i = String(idx);
+    inp.placeholder = f.ph || '0';
+    box.appendChild(inp);
+    const suf = node('span', 'u suf', f.suf || ''); suf.id = 'suf-' + key; box.appendChild(suf);
+  }
+  wrap.appendChild(box);
+  if (f.hint !== undefined) { const h = node('small', 'hint', f.hint); h.id = 'hint-' + key; wrap.appendChild(h); }
+  return wrap;
+}
+function buildInputs() {
+  for (const [gid, fields] of Object.entries(TRIP_GROUPS)) {
+    const g = document.getElementById(gid);
+    for (const f of fields) g.appendChild(makeField(f, 'trip'));
+  }
+  const groups = $('#groups');
+  for (const grp of SETTING_GROUPS) {
+    const d = node('details', 'group'); d.id = 'grp-' + grp.id;
+    const sm = document.createElement('summary');
+    const st = node('span', 'st');
+    st.appendChild(node('span', 'gt', grp.title));
+    const sv = node('span', 'sumv'); sv.id = 'sum-' + grp.id; st.appendChild(sv);
+    sm.appendChild(st);
+    d.appendChild(sm);
+    const grid = node('div', 'grid');
+    for (const f of grp.fields) grid.appendChild(makeField(f, 'set'));
+    d.appendChild(grid);
+    groups.appendChild(d);
+  }
+  $('#grp-fuel').open = true;
+}
+function renderCards() {
+  const box = $('#loadCards'); box.textContent = '';
+  const multi = TRIP.loads.length > 1;
+  TRIP.loads.forEach((l, i) => {
+    const card = node('div', 'card'); card.id = 'card-' + i;
+    const head = node('div', 'card-head');
+    head.appendChild(node('span', 'card-title', 'Load ' + (i + 1)));
+    if (multi) {
+      const x = node('button', 'x', 'Remove'); x.type = 'button'; x.dataset.remove = String(i);
+      x.setAttribute('aria-label', 'Remove load ' + (i + 1)); head.appendChild(x);
+    }
+    card.appendChild(head);
+    const grid = node('div', 'grid');
+    for (const f of LEG_FIELDS) grid.appendChild(makeField(f, 'leg', i));
+    card.appendChild(grid);
+    const hint = node('div', 'card-hint'); hint.id = 'cardhint-' + i; card.appendChild(hint);
+    box.appendChild(card);
+    for (const f of LEG_FIELDS) document.getElementById('f-L' + i + '-' + f.k).value = l[f.k] || '';
+  });
+  $('#btnAdd').hidden = TRIP.loads.length >= MAX_LOADS;
+  $('#w-market').hidden = multi;
+  $('#loadTitle').textContent = multi ? 'This trip · ' + TRIP.loads.length + ' loads' : 'This load';
+  setModeUI();
+}
+function fillTrip() {
+  renderCards();
+  for (const fields of Object.values(TRIP_GROUPS)) for (const f of fields) document.getElementById('f-' + f.k).value = TRIP[f.k] || '';
+  $('#f-hos').value = TRIP.hos;
+  $('#exampleTag').hidden = !isExample;
+}
+function fillSettings() {
+  for (const grp of SETTING_GROUPS) for (const f of grp.fields) document.getElementById('f-' + f.k).value = S[f.k] == null ? '' : String(S[f.k]);
+  updateSettingsUI();
+}
+function updateSettingsUI() {
+  const hired = S.driver === 'hired';
+  for (const f of SETTING_GROUPS.find(g => g.id === 'driver').fields) if (f.hired) document.getElementById('w-' + f.k).hidden = !hired;
+  const b = BASIS[S.driverBasis] || BASIS.pct;
+  $('#pre-driverPay').textContent = b.pre; $('#suf-driverPay').textContent = b.suf;
+  const dh = $('#hint-diesel'); dh.textContent = '';
+  dh.appendChild(document.createTextNode('TX average was ' + money2(DIESEL_REF.price) + ' on ' + DIESEL_REF.full + ' (AAA). '));
+  const a = node('a', null, 'Check today'); a.href = 'https://gasprices.aaa.com/?state=TX'; a.target = '_blank'; a.rel = 'noopener'; dh.appendChild(a);
+  const chip = $('#dieselChip'); chip.textContent = 'Diesel ' + money2(p(S.diesel)) + ' ';
+  chip.appendChild(node('span', null, S.dieselDate ? 'set ' + dateLabel(S.dieselDate) : 'TX avg ' + DIESEL_REF.label));
+}
+function setModeUI() {
+  const mile = TRIP.rateMode === 'mile';
+  $('#modeTotal').setAttribute('aria-pressed', String(!mile));
+  $('#modeMile').setAttribute('aria-pressed', String(mile));
+  TRIP.loads.forEach((l, i) => { const s = document.getElementById('suf-L' + i + '-rate'); if (s) s.textContent = mile ? '/mi' : ''; });
+}
+
+/* ---------- render ---------- */
+function setText(sel, txt, neg) { const e = $(sel); e.textContent = txt; e.classList.toggle('neg', !!neg); }
+function renderSummary(r) {
+  const live = r.state !== 'idle' && r.state !== 'bid';
+  const fl = r.focusL > 0 ? r.focusL : r.L;
+  $('#sign').dataset.k = r.state;
+  let word = '', line = '', sub = '';
+  if (r.state === 'idle') { word = 'Enter miles'; line = 'Add loaded miles to price a load.'; }
+  else if (r.state === 'bid') {
+    word = 'Bid ' + money(r.ask);
+    line = (r.focusLabel ? 'For ' + r.focusLabel + ': ' : '') + money2(fl > 0 ? r.ask / fl : 0) + ' per loaded mile'
+      + (r.askBasis === 'market' && !r.multi ? ' (lane average)' : ' hits your ' + targetText() + ' target');
+    sub = 'Break-even ' + (r.be > 0 ? money(r.be) + (fl > 0 ? ' · ' + money2(r.be / fl) + '/mi' : '') : '$0, the other loads cover costs');
+  } else {
+    word = r.state === 'take' ? 'Take it' : r.state === 'nego' ? 'Negotiate' : 'Pass';
+    line = r.state === 'pass' ? 'Loses ' + money(-r.net) + ' after all costs'
+      : r.state === 'nego' ? money(r.targetProfit - r.net) + ' short of your ' + targetText() + ' target'
+      : 'Clears your ' + targetText() + ' target by ' + money(r.net - r.targetProfit);
+    sub = 'Net ' + money(r.net) + ' · ' + money(r.perDay) + '/day · ' + money(r.perHour) + '/hr';
+  }
+  $('#signWord').textContent = word; $('#signLine').textContent = line; $('#signSub').textContent = sub;
+  setText('#tAllIn', live && r.M > 0 ? money2(r.allIn) : '—');
+  setText('#tCost', r.M > 0 ? money2(r.costPerMile) : '—');
+  setText('#tPmi', live && r.M > 0 ? money2(r.perMile) : '—', live && r.perMile < 0);
+  setText('#tPhr', live ? money(r.perHour) : '—', live && r.perHour < 0);
+  setText('#tPday', live ? money(r.perDay) : '—', live && r.perDay < 0);
+  setText('#tMargin', live ? Math.round(r.margin * 100) + '%' : '—', live && r.margin < 0);
+
+  const bid = $('#bid'); bid.textContent = '';
+  const row = (cls, k, v, s) => { const d = node('div', 'row' + (cls ? ' ' + cls : '')); d.append(node('span', 'k', k), node('span', 'v', v), node('span', 's', s || '')); bid.appendChild(d); };
+  if (r.L > 0) {
+    const askLabel = r.multi ? 'Ask for ' + r.focusLabel + ' (' + targetText() + ' target)'
+      : r.askBasis === 'market' ? 'Ask for (lane average)' : 'Ask for (' + targetText() + ' target)';
+    row('ask', askLabel, money(r.ask), Number.isFinite(r.ask) && fl > 0 ? money2(r.ask / fl) + '/mi' : '');
+    const beLabel = r.multi ? 'Break-even for ' + r.focusLabel : 'Break-even rate';
+    if (r.be > 0) row('', beLabel, money(r.be), fl > 0 ? money2(r.be / fl) + '/mi' : '');
+    else row('', beLabel, '$0', r.multi ? 'other loads cover it' : '');
+    if (r.multi) row('', 'Whole trip needs', money(r.tripAsk), 'paying ' + money(r.R));
+    if (r.cushion !== null) row('', 'Deadhead cushion', '+' + mi(r.cushion) + ' mi', 'still on target');
+    if (r.marketDiff !== null) row('', 'Lane average ' + money2(r.market) + '/mi', (r.marketDiff >= 0 ? '+' : '−') + Math.abs(Math.round(r.marketDiff * 100)) + '%', r.marketDiff >= 0 ? 'offer above' : 'offer below');
+    if (r.alt && r.R > 0) row('', 'vs. ' + mi(r.alt.miles) + ' mi empty', signed(r.alt.gain), r.alt.gain >= 0 ? 'better' : 'worse');
+    if (r.R > 0 && r.net > 0) row('', 'After ' + r.taxPct + '% tax set-aside', money(r.afterTax), '');
+  }
+  const flags = $('#flags'); flags.textContent = '';
+  if (r.overweight.length) flags.appendChild(node('span', 'flag', (r.multi ? 'Load ' + r.overweight.join(', ') + ' is' : 'This load is') + ' over your ' + mi(r.wMax) + ' lb max'));
+  if (r.k >= 0.99) flags.appendChild(node('span', 'flag', 'Fees and % driver pay take the whole gross'));
+}
+function renderTrip(r) {
+  const dl = $('#trip'); dl.textContent = '';
+  const item = (dt, dd, small) => { const d = node('div'); d.appendChild(node('dt', null, dt)); const v = node('dd', null, dd); if (small) v.appendChild(node('small', null, small)); d.appendChild(v); dl.appendChild(d); };
+  const empty = r.D1 + r.D2;
+  item('Total miles', mi(r.M) + ' mi', mi(r.L) + ' loaded · ' + mi(empty) + ' empty' + (r.M > 0 ? ' (' + Math.round(empty / r.M * 100) + '%)' : ''));
+  item('Driving', one(r.sim.driveH) + ' h', 'at ' + p(S.speed) + ' mph average');
+  item('On the clock', one(r.hours) + ' h', 'dock ' + one(r.sim.workH) + ' · fuel ' + one(r.sim.fuelH) + ' · breaks ' + one(r.sim.breakH));
+  item(r.manualDays ? 'Trip days' : 'Work days', r.manualDays ? one(r.days) : r.days.toFixed(2), r.manualDays ? 'your estimate' : one(r.hpd) + '-hour days');
+  item('Nights out', String(r.nights), r.manualDays ? 'from your trip days' : r.rules.name);
+  item(r.multi ? 'Last delivery' : 'Delivered', r.L > 0 && r.sim.deliveredAt != null ? dur(r.sim.deliveredAt) : '—', r.rules.none ? 'driving time, not counting sleep' : 'after you roll, incl. rest');
+  item('Fuel', one(r.gal.total) + ' gal', r.sim.fuelStops + ' stop' + (r.sim.fuelStops === 1 ? '' : 's') + ' · ' + one(r.mpgL) + ' mpg loaded' + (r.multi ? ' avg' : ''));
+  item(r.multi ? 'Heaviest load' : 'Weight', mi(r.W) + ' lbs', Math.round(r.W / r.wMax * 100) + '% of your max');
+}
+function renderLedger(r) {
+  const tb = $('#ledger'); tb.textContent = '';
+  const pm = x => r.M > 0 ? money2(x / r.M) : '—';
+  const tr = (cls, label, note, amt, show = true) => {
+    if (!show) return;
+    const t = node('tr', cls || null);
+    const td = node('td', null, label); if (note) td.appendChild(node('span', 'note2', note)); t.appendChild(td);
+    if (amt === null) { td.colSpan = 3; } else { t.appendChild(node('td', 'n' + (amt < -0.5 ? ' neg' : ''), money(amt))); t.appendChild(node('td', 'n' + (amt < -0.5 ? ' neg' : ''), pm(amt))); }
+    tb.appendChild(t);
+  };
+  tr('sec', 'Revenue', null, null);
+  if (r.multi) r.loads.forEach(x => tr('', loadName(x), mi(x.L) + ' loaded mi' + (x.L > 0 && x.R > 0 ? ' · ' + money2(x.posted) + '/mi' : ''), x.R));
+  else tr('', 'Linehaul', r.L > 0 ? money2(r.posted) + ' per loaded mile' : null, r.R);
+  tr('', 'Extra pay', null, r.A, r.A > 0);
+  tr('tot', 'Gross', null, r.G);
+  tr('sec', 'Costs', null, null);
+  tr('', 'Fuel', one(r.gal.total) + ' gal × ' + money2(r.P), r.fuel);
+  tr('', 'DEF', money2(p(S.def)) + '/mi', r.def, r.def > 0);
+  tr('', 'Tolls & permits', null, r.tolls, r.tolls > 0);
+  tr('', 'Other trip costs', null, r.other, r.other > 0);
+  tr('', 'Nights out', r.nights + ' night' + (r.nights === 1 ? '' : 's') + ' × ' + money(p(S.roadPerNight)), r.road, r.road > 0);
+  if (r.hired) { const b = BASIS[S.driverBasis] || BASIS.pct; tr('', 'Driver pay', (b.pre === '$' ? money2(r.pay) : r.pay + '%') + ' ' + b.label + ' + ' + p(S.burden) + '% payroll', r.driver); }
+  tr('', 'Fees', (r.feePct * 100).toFixed(1).replace(/\.0$/, '') + '% of gross', r.fees, r.fees > 0);
+  tr('tot', 'Total cost', null, r.cost);
+  tr('net', 'Net profit', r.hired ? 'Left after trip costs and driver pay' : 'Left after trip costs, before income tax', r.net);
+}
+function renderFormula(r) {
+  const ol = $('#flist'); ol.textContent = '';
+  const li = (name, gen, val) => { const l = node('li'); l.append(node('div', 'fn', name), node('div', 'fg', gen), node('div', 'fv', val)); ol.appendChild(l); };
+  li('Total miles', 'Deadhead to each pickup + Loaded miles of each load + Empty after the last delivery', mi(r.D1) + ' + ' + mi(r.L) + ' + ' + mi(r.D2) + ' = ' + mi(r.M) + ' mi');
+  li('Loaded MPG', 'Your actual MPG for the load if entered; otherwise Empty MPG − (Empty MPG − Max-load MPG) × Weight ÷ Max weight',
+    r.loads.map(x => (r.multi ? 'Load ' + (x.i + 1) + ': ' : '') + one(x.mpg) + (x.actual ? ' (actual)' : ' (est. at ' + mi(x.W) + ' lbs)')).join(' · '));
+  li('Fuel', 'Diesel × (each load’s miles ÷ its MPG + Empty miles ÷ Empty MPG)', money2(r.P) + ' × (' + one(r.gal.loaded) + ' + ' + one(r.gal.empty) + ') gal = ' + money(r.fuel));
+  li('DEF', 'Total miles × DEF per mile', mi(r.M) + ' × ' + money2(p(S.def)) + ' = ' + money(r.def));
+  li('Hours', 'Driving (miles ÷ mph) + load, unload, wait and stops + fuel stops + 30-min breaks', one(r.sim.driveH) + ' + ' + one(r.sim.workH) + ' + ' + one(r.sim.fuelH) + ' + ' + one(r.sim.breakH) + ' = ' + one(r.hours) + ' h');
+  if (r.manualDays) li('Days and nights', 'Your trip days; nights out = days − 1, rounded up', one(r.days) + ' days · ' + r.nights + ' night' + (r.nights === 1 ? '' : 's') + ' out');
+  else li('Days and nights', r.rules.none ? 'Hours ÷ Hours in a work day; one night out per day after the first (no hours limits)' : 'Hours ÷ Hours in a work day; nights = required 10-hour (or 8-hour) breaks', one(r.hours) + ' ÷ ' + one(r.hpd) + ' = ' + r.days.toFixed(2) + ' days · ' + r.nights + ' night' + (r.nights === 1 ? '' : 's') + ' out');
+  li('Trip costs', 'Tolls & permits + Other trip costs + Nights × Cost per night', money(r.tolls) + ' + ' + money(r.other) + ' + ' + r.nights + ' × ' + money(p(S.roadPerNight)) + ' = ' + money(r.tolls + r.other + r.road));
+  if (r.hired) { const b = BASIS[S.driverBasis] || BASIS.pct; li('Driver', 'Driver pay (' + b.desc + ') × (1 + payroll %)', (b.pre === '$' ? money2(r.pay) : r.pay + '%') + ' ' + b.label + ' × ' + one(r.burden) + ' = ' + money(r.driver)); }
+  else li('Driver', 'You drive, so driver cost is $0', '$0');
+  li('Gross', r.multi ? 'Rates of all loads + Extra pay' : 'Rate + Extra pay', (r.multi ? r.loads.map(x => money(x.R)).join(' + ') : money(r.R)) + ' + ' + money(r.A) + ' = ' + money(r.G));
+  li('Fees', 'Gross × (Factoring + Dispatch + Other %)', money(r.G) + ' × ' + (r.feePct * 100).toFixed(1) + '% = ' + money(r.fees));
+  li('Net profit', 'Gross − Fuel − DEF − Trip costs − Driver − Fees', money(r.G) + ' − ' + money(r.fuel) + ' − ' + money(r.def) + ' − ' + money(r.tolls + r.other + r.road) + ' − ' + money(r.driver) + ' − ' + money(r.fees) + ' = ' + money(r.net));
+  li('Profit rates', 'Net ÷ Total miles · Net ÷ Hours · Net ÷ Work days', money2(r.perMile) + '/mi · ' + money(r.perHour) + '/hr · ' + money(r.perDay) + '/day');
+  li('Break-even rate', (r.multi ? 'All loads together: ' : '') + '(Costs that don’t scale with the rate) ÷ (1 − %-of-gross costs) − Extra pay', money(r.C0) + ' ÷ ' + (1 - r.k).toFixed(3) + ' − ' + money(r.A) + ' = ' + money(r.beRate));
+  li('Target rate', (r.multi ? 'All loads together: ' : '') + '(Those costs + Target profit) ÷ (1 − %-of-gross costs) − Extra pay', '(' + money(r.C0) + ' + ' + money(r.targetProfit) + ') ÷ ' + (1 - r.k).toFixed(3) + ' − ' + money(r.A) + ' = ' + money(r.tgtRate) + (r.multi ? '' : ' → ask ' + money(r.ask)));
+  if (r.multi) {
+    const others = r.loads.filter(x => r.focus.indexOf(x.i) < 0).reduce((a, x) => a + x.R, 0);
+    li('Ask for ' + r.focusLabel, 'Target rate for the whole trip − what the other loads pay, rounded up to $25', money(r.tgtRate) + ' − ' + money(others) + ' = ' + money(r.tgtRate - others) + ' → ask ' + money(r.ask));
+  }
+  li('Verdict', 'Net below $0 → Pass · Net below target profit → Negotiate at the target rate · otherwise Take', 'Net ' + money(r.net) + ' vs target ' + money(r.targetProfit) + ' → ' + (r.state === 'take' ? 'Take' : r.state === 'nego' ? 'Negotiate' : r.state === 'pass' ? 'Pass' : r.state === 'bid' ? 'Bid ' + money(r.ask) : '—'));
+}
+function renderSums(r) {
+  const fuelMi = r.M > 0 ? r.fuel / r.M : p(S.diesel) / Math.max(n(S.mpgEmpty), 1);
+  $('#sum-fuel').textContent = 'fuel ' + money2(fuelMi) + ' + DEF ' + money2(p(S.def)) + ' per mile';
+  $('#sum-fees').textContent = (r.feePct * 100).toFixed(1).replace(/\.0$/, '') + '% off gross';
+  const b = BASIS[S.driverBasis] || BASIS.pct;
+  $('#sum-driver').textContent = S.driver === 'hired' ? 'hired · ' + (b.pre === '$' ? money2(p(S.driverPay)) : p(S.driverPay) + '%') + ' ' + b.label : 'you drive';
+  $('#sum-time').textContent = targetText() + ' target · ' + p(S.speed) + ' mph';
+  $('#sum-hos').textContent = p(S.hosDrive) + '/' + p(S.hosDuty) + '/' + p(S.hosOff) + (TRIP.hos === 'custom' ? ' · in use' : ' · not in use');
+}
+function renderBar(r) {
+  const pill = $('#barPill'); pill.dataset.k = r.state;
+  pill.textContent = { idle: '—', bid: 'Bid', pass: 'Pass', nego: 'Negotiate', take: 'Take' }[r.state];
+  if (r.state === 'idle') { $('#barNet').textContent = 'Enter a load'; $('#barSub').textContent = ''; $('#barAsk').textContent = ''; return; }
+  if (r.state === 'bid') { $('#barNet').textContent = 'Ask ' + money(r.ask); $('#barSub').textContent = 'break-even ' + money(Math.max(r.be, 0)); $('#barAsk').textContent = r.focusL > 0 ? money2(r.ask / r.focusL) + '/mi' : ''; return; }
+  $('#barNet').textContent = 'Net ' + money(r.net);
+  $('#barSub').textContent = money(r.perDay) + '/day · ' + money(r.perHour) + '/hr';
+  $('#barAsk').textContent = r.state === 'take' ? money2(r.allIn) + '/mi' : 'Ask ' + money(r.ask);
+}
+function renderCardHints(r) {
+  r.loads.forEach(x => {
+    const h = document.getElementById('cardhint-' + x.i); if (!h) return;
+    if (x.L <= 0) { h.textContent = ''; return; }
+    const rateTxt = x.R > 0 ? (TRIP.rateMode === 'mile' ? '= ' + money(x.R) + ' total' : '= ' + money2(x.posted) + ' per loaded mile') : 'No rate yet';
+    h.textContent = rateTxt + ' · ' + one(x.mpg) + ' mpg ' + (x.actual ? '(actual)' : '(est.)') + ' · ' + one(x.gal) + ' gal';
+  });
+}
+function recompute() {
+  const r = evaluate(TRIP, S);
+  renderSummary(r); renderTrip(r); renderLedger(r); renderFormula(r); renderSums(r); renderBar(r); renderCardHints(r);
+  const hd = document.getElementById('hint-days');
+  if (hd) hd.textContent = 'Blank = estimate: ' + one(r.estDays) + ' days, ' + r.estNights + ' night' + (r.estNights === 1 ? '' : 's') + ' out';
+}
+
+/* ---------- shared settings (db) ---------- */
+let DB = null, dbWritable = true, touched = false, saveTimer = null, saving = false, again = false;
+function setSave(state) {
+  $('#saveStatus').textContent = {
+    defaults: 'Using defaults', device: 'Saved on this device', shared: 'Saved to this calculator',
+    saving: 'Saving…', readonly: 'View only here; changes stay on this device', error: 'Couldn’t save online; kept on this device'
+  }[state] || '';
+}
+async function connectDb() {
+  try {
+    const c = window.claude;
+    if (!c || typeof c.use !== 'function') return;
+    const db = await c.use('db');
+    if (!db) return;
+    DB = db;
+    const snap = await db.doc('settings/truck').get();
+    if (snap && snap.exists && !touched) {
+      const d = snap.data() || {};
+      if (d.settings) { S = cleanSettings(d.settings); LS.set(KEY_S, S); fillSettings(); recompute(); }
+      setSave('shared');
+    }
+  } catch (e) { DB = null; }
+}
+function scheduleSave() {
+  touched = true;
+  LS.set(KEY_S, S);
+  if (!DB || !dbWritable) { setSave(dbWritable ? 'device' : 'readonly'); return; }
+  setSave('saving');
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(flushSave, 900);
+}
+async function flushSave() {
+  if (saving) { again = true; return; }
+  saving = true;
+  try {
+    await DB.doc('settings/truck').set({ v: 1, settings: Object.assign({}, S), savedAt: new Date().toISOString() });
+    setSave('shared');
+  } catch (e) {
+    const code = e && e.code;
+    if (code === 'invalid_argument' || code === 'not_granted' || code === 'revoked') { dbWritable = false; setSave('readonly'); }
+    else setSave('error');
+  }
+  saving = false;
+  if (again) { again = false; flushSave(); }
+}
+
+/* ---------- events ---------- */
+function saveTrip() { LS.set(KEY_L, TRIP); }
+function edited() { isExample = false; $('#exampleTag').hidden = true; saveTrip(); }
+function onTripEdit(t) {
+  const k = t.dataset.k; if (!k) return;
+  if (t.dataset.i !== undefined) { const leg = TRIP.loads[+t.dataset.i]; if (leg) leg[k] = t.value; }
+  else TRIP[k] = t.value;
+  edited();
+  recompute();
+}
+function onSettingEdit(t) {
+  const k = t.dataset.k; if (!k) return;
+  S[k] = t.value;
+  if (k === 'diesel') S.dieselDate = new Date().toISOString().slice(0, 10);
+  if (k === 'driverBasis') { S.driverPay = BASIS[t.value].def; $('#f-driverPay').value = String(S.driverPay); }
+  updateSettingsUI(); scheduleSave(); recompute();
+}
+function setMode(mode) {
+  if (TRIP.rateMode === mode) return;
+  TRIP.loads.forEach((l, i) => {
+    const L = p(l.loaded), v = p(l.rate);
+    if (v > 0 && L > 0) l.rate = mode === 'mile' ? String(Math.round(v / L * 1000) / 1000) : String(Math.round(v * L));
+    const e = document.getElementById('f-L' + i + '-rate'); if (e) e.value = l.rate;
+  });
+  TRIP.rateMode = mode;
+  setModeUI(); edited(); recompute();
+}
+function wire() {
+  const panel = $('#loadPanel');
+  panel.addEventListener('input', e => { if (e.target.tagName === 'INPUT') onTripEdit(e.target); });
+  panel.addEventListener('change', e => { if (e.target.tagName === 'SELECT') onTripEdit(e.target); });
+  $('#loadCards').addEventListener('click', e => {
+    const b = e.target && e.target.closest ? e.target.closest('[data-remove]') : null;
+    if (!b || TRIP.loads.length <= 1) return;
+    TRIP.loads.splice(+b.dataset.remove, 1);
+    edited(); renderCards(); recompute();
+  });
+  $('#btnAdd').addEventListener('click', () => {
+    if (TRIP.loads.length >= MAX_LOADS) return;
+    TRIP.loads.push(Object.assign({}, BLANK_LEG));
+    edited(); renderCards(); recompute();
+    const e = document.getElementById('f-L' + (TRIP.loads.length - 1) + '-rate'); if (e) e.focus();
+  });
+  $('#groups').addEventListener('input', e => { if (e.target.tagName === 'INPUT') onSettingEdit(e.target); });
+  $('#groups').addEventListener('change', e => { if (e.target.tagName === 'SELECT') onSettingEdit(e.target); });
+  $('#modeTotal').addEventListener('click', () => setMode('total'));
+  $('#modeMile').addEventListener('click', () => setMode('mile'));
+  $('#btnClear').addEventListener('click', () => {
+    TRIP = blankTrip({ hos: TRIP.hos, rateMode: TRIP.rateMode });
+    isExample = false; saveTrip(); fillTrip(); recompute();
+    const e = document.getElementById('f-L0-rate'); if (e) e.focus();
+  });
+  $('#btnExample').addEventListener('click', () => { TRIP = cloneTrip(EXAMPLE_TRIP); isExample = true; LS.del(KEY_L); fillTrip(); recompute(); });
+  let armed = false, armTimer = null;
+  $('#btnReset').addEventListener('click', e => {
+    const b = e.currentTarget;
+    if (!armed) { armed = true; b.textContent = 'Tap again to reset'; armTimer = setTimeout(() => { armed = false; b.textContent = 'Reset to defaults'; }, 3000); return; }
+    clearTimeout(armTimer); armed = false; b.textContent = 'Reset to defaults';
+    S = Object.assign({}, DEFAULTS); fillSettings(); scheduleSave(); recompute();
+  });
+  $('#bar').addEventListener('click', () => $('#summary').scrollIntoView({ behavior: 'smooth', block: 'start' }));
+}
+
+buildInputs();
+fillTrip();
+fillSettings();
+setSave(LS.get(KEY_S) ? 'device' : 'defaults');
+wire();
+recompute();
+window.__lcOK = true;
+connectDb();
+})();
+</script>
+
+</body>
+</html>
